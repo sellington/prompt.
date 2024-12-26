@@ -1,5 +1,5 @@
 :root {
-    --neon-green: #39ff14;
+    --neon-green: #B14EF9;
     --dark-bg: #0a0a0a;
     --darker-bg: #000000;
     --text-color: #ffffff;
@@ -94,7 +94,7 @@ body {
 }
 
 .user-message {
-    background-color: rgba(57, 255, 20, 0.1);
+    background-color: rgba(177, 78, 249, 0.1);
     margin-left: auto;
     border: 1px solid var(--neon-green);
 }
@@ -102,7 +102,7 @@ body {
 .ai-message {
     background-color: var(--dark-bg);
     margin-right: auto;
-    border: 1px solid rgba(57, 255, 20, 0.5);
+    border: 1px solid rgba(177, 78, 249, 0.5);
 }
 
 .input-container {
@@ -161,5 +161,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(57, 255, 20, 0.8);
+    background: rgba(177, 78, 249, 0.8);
 }
