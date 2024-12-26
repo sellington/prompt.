@@ -1,0 +1,165 @@
+:root {
+    --neon-green: #39ff14;
+    --dark-bg: #0a0a0a;
+    --darker-bg: #000000;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.neon-text {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-green);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 5px var(--neon-green),
+                 0 0 10px var(--neon-green),
+                 0 0 20px var(--neon-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.neon-text .subtitle {
+    font-size: 0.7em;
+    opacity: 0.7;
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 0 0 3px var(--neon-green);
+}
+
+.model-selector {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.neon-select {
+    background-color: var(--darker-bg);
+    color: var(--neon-green);
+    border: 2px solid var(--neon-green);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    width: 300px;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--neon-green);
+}
+
+.neon-select:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--neon-green);
+}
+
+.chat-container {
+    background-color: var(--darker-bg);
+    border: 2px solid var(--neon-green);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px var(--neon-green);
+}
+
+.messages {
+    height: 500px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: rgba(57, 255, 20, 0.1);
+    margin-left: auto;
+    border: 1px solid var(--neon-green);
+}
+
+.ai-message {
+    background-color: var(--dark-bg);
+    margin-right: auto;
+    border: 1px solid rgba(57, 255, 20, 0.5);
+}
+
+.input-container {
+    display: flex;
+    gap: 1rem;
+}
+
+#user-input {
+    flex: 1;
+    background-color: var(--darker-bg);
+    color: var(--text-color);
+    border: 2px solid var(--neon-green);
+    border-radius: 5px;
+    padding: 0.5rem;
+    resize: none;
+    font-family: 'Arial', sans-serif;
+}
+
+#user-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--neon-green);
+}
+
+.neon-button {
+    background-color: transparent;
+    color: var(--neon-green);
+    border: 2px solid var(--neon-green);
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--neon-green);
+}
+
+.neon-button:hover {
+    background-color: var(--neon-green);
+    color: var(--darker-bg);
+    box-shadow: 0 0 10px var(--neon-green),
+                0 0 20px var(--neon-green);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darker-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neon-green);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(57, 255, 20, 0.8);
+}

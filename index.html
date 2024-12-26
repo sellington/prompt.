@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Interface</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="neon-text">Prompt. <span class="subtitle">AI Chat Interface</span></h1>
+        
+        <div class="model-selector">
+            <select id="model-select" class="neon-select">
+                <option value="">Select an AI Model</option>
+                <!-- Models will be populated via JavaScript -->
+            </select>
+        </div>
+
+        <div class="chat-container">
+            <div id="chat-messages" class="messages">
+                <!-- Messages will appear here -->
+            </div>
+            
+            <div class="input-container">
+                <textarea id="user-input" placeholder="Type your message here..." rows="3"></textarea>
+                <button id="send-button" class="neon-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
