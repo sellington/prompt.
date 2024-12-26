@@ -1,0 +1,27 @@
+# Version control
+.git
+.gitignore
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Node modules (if any in future)
+node_modules
+
+# Environment files
+.env
+.env.*
+
+# Editor directories
+.idea
+.vscode
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Documentation
+README.md
+LICENSE

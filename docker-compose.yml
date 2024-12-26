@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  prompt-chat:
+    build: .
+    container_name: prompt-chat
+    ports:
+      - "3000:80"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+    restart: unless-stopped
+    networks:
+      - prompt-network
+    volumes:
+      - ./config:/config:ro  # For any future configuration files
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.prompt-chat.rule=Host(`chat.localhost`)"  # Change this to your domain
+
+networks:
+  prompt-network:
+    driver: bridge

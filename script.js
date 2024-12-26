@@ -1,5 +1,5 @@
 // OpenRouter API configuration
-const OPENROUTER_API_KEY = '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';
+const OPENROUTER_API_KEY = window.CONFIG.OPENROUTER_API_KEY;
 const API_BASE_URL = 'https://openrouter.ai/api/v1';
 
 // Available models will be fetched from OpenRouter
