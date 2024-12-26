@@ -53,6 +53,13 @@ body {
     text-align: center;
 }
 
+.selector-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
 .neon-select {
     background-color: var(--darker-bg);
     color: var(--neon-green);
@@ -68,6 +75,51 @@ body {
 .neon-select:focus {
     outline: none;
     box-shadow: 0 0 10px var(--neon-green);
+}
+
+.neon-select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ollama-button {
+    padding: 0.5rem 1rem;
+    min-width: 120px;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 2px solid var(--neon-green);
+}
+
+.ollama-button.active {
+    background-color: var(--neon-green);
+    color: var(--darker-bg);
+    box-shadow: 0 0 15px var(--neon-green),
+                0 0 30px var(--neon-green);
+    font-weight: bold;
+    border-width: 3px;
+}
+
+.ollama-button.active::after {
+    content: '✓';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ollama-button:not(.active) {
+    background-color: transparent;
+    color: var(--neon-green);
+}
+
+.ollama-button:not(.active):hover {
+    box-shadow: 0 0 10px var(--neon-green);
+    background-color: rgba(177, 78, 249, 0.1);
+}
+
+.model-selector.ollama-mode .neon-select {
+    border-color: rgba(177, 78, 249, 0.5);
+    opacity: 0.7;
 }
 
 .chat-container {

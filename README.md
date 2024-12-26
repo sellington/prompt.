@@ -6,6 +6,7 @@ A containerized web-based chat interface for AI models using the OpenRouter API.
 
 - Clean, modern UI with neon theme
 - Support for multiple AI models through OpenRouter
+- Local AI model support via Ollama integration
 - Real-time chat interface
 - Containerized for easy deployment
 - Nginx-based for optimal performance
@@ -16,6 +17,7 @@ A containerized web-based chat interface for AI models using the OpenRouter API.
 - Docker
 - Docker Compose
 - OpenRouter API key (get one at https://openrouter.ai/)
+- (Optional) Ollama installed locally for local AI model support
 
 ## Security Notice
 
@@ -56,6 +58,7 @@ Required environment variables:
 | Variable | Description | Example |
 |----------|-------------|---------|
 | OPENROUTER_API_KEY | Your OpenRouter API key | sk-or-v1-... |
+| OLLAMA_BASE_URL | URL for your Ollama instance (optional) | http://localhost:11434 |
 
 Get your API key from [OpenRouter](https://openrouter.ai/).
 
@@ -64,6 +67,7 @@ Get your API key from [OpenRouter](https://openrouter.ai/).
 ### Environment Variables
 
 - `OPENROUTER_API_KEY`: Your OpenRouter API key (required)
+- `OLLAMA_BASE_URL`: URL for your Ollama instance (defaults to http://localhost:11434)
 
 ### Docker Compose Configuration
 
@@ -118,6 +122,12 @@ docker run -d \
    - Verify your OpenRouter API key is correct
    - Check the browser console for error messages
    - Ensure your network allows the required connections
+
+3. If Ollama integration fails:
+   - Verify Ollama is installed and running locally
+   - Check if Ollama is accessible at the configured URL
+   - Ensure your models are properly installed in Ollama (run `ollama list`)
+   - Check browser console for CORS-related errors
 
 ## License
 

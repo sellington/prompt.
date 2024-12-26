@@ -14,10 +14,13 @@
         <h1 class="neon-text">Prompt. <span class="subtitle">AI Chat Interface</span></h1>
         
         <div class="model-selector">
-            <select id="model-select" class="neon-select">
-                <option value="">Select an AI Model</option>
-                <!-- Models will be populated via JavaScript -->
-            </select>
+            <div class="selector-container">
+                <select id="model-select" class="neon-select">
+                    <option value="">Select an AI Model</option>
+                    <!-- Models will be populated via JavaScript -->
+                </select>
+                <button id="ollama-toggle" class="neon-button ollama-button">Use Ollama</button>
+            </div>
         </div>
 
         <div class="chat-container">

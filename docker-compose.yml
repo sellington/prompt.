@@ -8,15 +8,12 @@ services:
       - "3000:80"
     environment:
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     restart: unless-stopped
     networks:
       - prompt-network
-    volumes:
-      - ./config:/config:ro  # For any future configuration files
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.prompt-chat.rule=Host(`chat.localhost`)"  # Change this to your domain
-
 networks:
   prompt-network:
     driver: bridge
